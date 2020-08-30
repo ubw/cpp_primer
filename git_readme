@@ -1,0 +1,5 @@
+git config --global user.name "name"
+git config --global user.email "email"
+git init
+ssh-keygen -t rsa -C "cjwstorm@163.com"
+ssh -T git@github.com

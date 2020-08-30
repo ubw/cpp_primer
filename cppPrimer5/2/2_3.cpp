@@ -1,0 +1,17 @@
+#include<iostream>
+
+
+int main(void)
+{
+    unsigned u = 10,u2 = 42;
+    std::cout << u2-u << std::endl;
+    /*无符号数字相减，得到负数，会自动加上模*/
+    std::cout << u-u2 << std::endl;
+    int i = 10, i2 = 42;
+
+    std::cout << i2-i << std::endl;
+    std::cout << i-i2 << std::endl;
+    std::cout << i-u << std::endl;
+    std::cout << u-i << std::endl;
+
+}

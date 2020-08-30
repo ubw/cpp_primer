@@ -1,0 +1,3 @@
+ssh-keygen -t rsa -C "cjwstorm@163.com"
+cat /home/jwchu/.ssh/id_rsa.pub
+ssh -T git@github.com

@@ -3,3 +3,5 @@ git config --global user.email "email"
 git init
 ssh-keygen -t rsa -C "cjwstorm@163.com"
 ssh -T git@github.com
+git add -A
+git commit -m 'init'

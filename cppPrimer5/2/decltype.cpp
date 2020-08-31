@@ -37,6 +37,13 @@ int main(void)
     cout <<"i  :"<<i<<endl;
     cout <<"r2:&r2 :"<<&r2<<endl;
 
+    /*7. 数组作为decltype初值，推断得到的类型也是数组*/
+    int array[10]{0,1,2,3,4,5,6,7,8,9};
+    decltype(array) array2 = {1,3,5,7,9,11,13,15,17,19};
+    for(int i:array2)
+    {
+        cout << i << endl;
+    }
 
     return 0;
 

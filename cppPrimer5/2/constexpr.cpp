@@ -29,6 +29,7 @@ int main(void)
     /*call to non-constexpr function ‘int foo()’*/
     constexpr int z = foo();
     constexpr int t = foo1();
+    /*error: ‘constexpr int foo2(int)’ called in a constant expression*/
     constexpr int t1 = foo2(j);
 
 

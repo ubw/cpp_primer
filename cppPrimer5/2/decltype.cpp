@@ -44,6 +44,13 @@ int main(void)
     {
         cout << i << endl;
     }
+  
+    /*8. decltype 因为不会退化数组从而变成指针，sizeof也不会，除非他本身就是指针，比如说通过函数数组退化成了指针，但是写成数组的样式。所以如果decltype+数组想要变成指针或者引用，得另外加上*/
+    decltype(array) &array8 = array;
+    for(int i:array8)
+    {
+        cout <<"=-====8=====" <<  i << endl;
+    }
 
     return 0;
 

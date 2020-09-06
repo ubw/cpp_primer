@@ -43,6 +43,12 @@ int main(void)
     {
         cout << *it << endl;
     }
-    
+
+    //4. 值初始化
+    vector<int> v4(10);
+    for(auto it=v4.begin(); it != v4.end(); it++)
+    {
+        cout << "v4: " <<  *it << endl;
+    } 
     return 0;
 }

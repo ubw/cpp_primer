@@ -13,4 +13,9 @@ int main(void)
     }
 
     cout << test << endl;
+    //为什么比较不相同？
+    if(test == "cjw")
+    {
+        cout << "test == cjw" << endl;
+    }
 }

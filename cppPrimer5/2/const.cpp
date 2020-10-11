@@ -51,6 +51,12 @@ int main(void)
     // invalid initialization of reference of type ‘int&’ from expression of type
     // int &r5 = dval5;
     const int &r5_1 = dval5;
+
+    //6. 顶层const 可以忽略，我记得不是不能赋值一个常量给非常量吗？不然就可以修改常量了呀 ?
+    const int ci6 = 6;
+    int i6 = ci6;
+    const int ci7 = i6;
+    
     
     return 0;
 }

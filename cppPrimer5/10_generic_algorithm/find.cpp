@@ -19,4 +19,8 @@ int main(void)
     auto ret2 = find(vi.begin(), vi.end()-1, 11);
     cout << *ret << endl;
     cout << *ret2 << endl;
+
+    //5. find_if()
+    // find_if()只支持一元谓词
+    //auto func = find_if(vi.begin(), vi.end(), [](int i, int sz){return i<sz;});
 }

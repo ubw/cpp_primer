@@ -1,0 +1,40 @@
+[jwchu@VM_0_11_centos Email]$ telnet smtp.163.com 25
+Trying 220.181.12.11...
+Connected to smtp.163.com.
+Escape character is '^]'.
+220 163.com Anti-spam GT for Coremail System (163com[20141201])
+EHLO cjwstorm
+250-mail
+250-PIPELINING
+250-AUTH LOGIN PLAIN
+250-AUTH=LOGIN PLAIN
+250-coremail 1Uxr2xKj7kG0xkI17xGrU7I0s8FY2U3Uj8Cz28x1UUUUU7Ic2I0Y2UrfbCDKUCa0xDrUUUUj
+250-STARTTLS
+250 8BITMIME
+auth login
+334 dXNlcm5hbWU6
+Y2p3c3Rvcm0=
+334 UGFzc3dvcmQ6
+RFBTUERTR0dUQUlMQVJKWQ==
+235 Authentication successful
+MAIL FROM: cjw
+500 Error: bad syntax
+MAIL FROM: <cjwstorm@163.com>
+250 Mail OK
+RCPT TO: <cjwstorm@163.com>
+250 Mail OK
+DATA
+354 End data with <CR><LF>.<CR><LF>
+From: <cjwstorm@163.com>
+To: <cjwstorm@1763.com>
+To: <cjwstorm@163.com>
+Subject:hello
+
+hello smtp
+
+.
+250 Mail OK queued as smtp7,C8CowABHGjR8ZGNfaNgOHA--.15819S3 1600349514
+quit
+221 Bye
+Connection closed by foreign host.
+

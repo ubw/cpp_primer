@@ -13,6 +13,7 @@
 #include <vector>
 #include "email.h"
 #include <string.h>
+#include "lottery.h"
 
 
 using namespace std;
@@ -37,9 +38,23 @@ void foo()
     cout << "lottery_date:" << oJson["result"]("lottery_date")  << endl;
     cout << "lottery_res:" << oJson["result"]("lottery_res")  << endl;
 
-    string str_tmp = oJson["result"]("lottery_res");
+    string lottery_date = oJson["result"]("lottery_date");
+    string lottery_res =  oJson["result"]("lottery_res");
+    string str_tmp = lottery_date + string("期号码:") +   lottery_res;
+   
 
-    cout << str_tmp.c_str() << endl;
+
+    lottery l(lottery_res);
+    lottery l1("03,07,25,27,30,04,12");
+    int ret1 = l.match(l1);
+    string test_body;
+    if(ret1 == 0)
+    {
+        test_body = string("没中奖");
+    }else{
+        test_body = string("中奖了,")+to_string(ret1) + string("等奖");
+    }
+    cout << test_body << endl;
 
 
 
@@ -53,7 +68,7 @@ void foo()
         "<cjwstorm@163.com>",                              /* from     */
         recipients,                                      /* to       */
         str_tmp.c_str(),                                  /* subject  */
-        str_tmp.c_str(),                              /* body     */
+        test_body.c_str(),                              /* body     */
         "smtp.163.com",                                     /* hostname */
          25                                               /* port     */
     );

@@ -1,1 +1,40 @@
-g++ -std=c++11 -L/usr/local/lib -lcurl -o xget get_file.c CJsonObject/cJSON.c  CJsonObject/CJsonObject.cpp email.cpp
+g++ -std=c++11 -L/usr/local/lib -lcurl -o xget get_file.c CJsonObject/cJSON.c  CJsonObject/CJsonObject.cpp email.cpp lottery.cpp
+
+
+1.  新平台登录设置
+adduser xxx
+passwd xxx
+
+#禁止root登录
+vi /etc/ssh/sshd_config #修改的文件还是这个
+PermitRootLogin yes #把yes，改成no
+#重启
+systemctl restart sshd.service
+
+#增加sudo权限
+su vim /etc/sudoers
+xxxx   ALL=(ALL)       ALL
+
+2. 安装git
+yum -y install git
+
+3. 下载项目
+git clone xxx
+
+4. 安装g++
+sudo yum install gcc-c++
+
+5. 重新下载cJsonObject（库中的没用??)
+git clone xxx
+
+6. 安装libcurl
+yum -y install curl-devel
+
+7.编译
+todo
+
+8 邮箱
+25端口
+
+9 执行
+nohup python -u back_query.py > cjw.log &

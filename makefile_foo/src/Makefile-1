@@ -1,0 +1,5 @@
+hello: hello.c
+	gcc -I{/home/jwchu/cpp_primer/makefile_foo}/inc -c hello.c
+	gcc -o hello hello.o
+	rm -rf hello.o
+	mv hello /home/jwchu/cpp_primer/makefile_foo/bin

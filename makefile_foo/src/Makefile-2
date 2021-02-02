@@ -1,0 +1,13 @@
+HOME_DIR=/home/jwchu/cpp_primer/makefile_foo
+INC_DIR=${HOME_INC}/inc
+BIN_DIR=${HOME_DIR}/bin
+
+.SUFFIXES: .c .cpp
+.c.o:
+	g++ -I{INC_DIR} -c $<
+
+hello: hello.o
+	echo "begin compile"
+	gcc -o hello hello.o
+	rm -rf hello.o
+	mv hello ${BIN_DIR}

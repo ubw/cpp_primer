@@ -1,0 +1,18 @@
+HOME_DIR=/home/jwchu/cpp_primer/makefile_foo
+INC_DIR=${HOME_INC}/inc
+BIN_DIR=${HOME_DIR}/bin
+
+.SUFFIXES: .c .cpp
+.c.o:
+	g++ -I{INC_DIR} -c $<
+
+
+all: hello
+
+#$@目标的完整名称
+#$?所有依赖的文件
+hello: hello.o
+	echo "begin compile"
+	gcc -o $@ hello.o
+	rm -rf hello.o
+	mv $@ ${BIN_DIR}

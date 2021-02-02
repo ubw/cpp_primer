@@ -40,7 +40,7 @@ int main(void)
 
 
     BASE &rb = b;
-     //3 rd 是一个引用，但是为什么没有多态呢？??
+     //3 rd 是一个引用，但是为什么没有多态呢？??因为D并不是派生类，是基类，对派生类做切割了
     BASE &rd = d;
     BASE &rd2 = d1;
     //invalid initialization of non-const reference of type ‘BASE&’ from an rvalue of type ‘DERIVED*’

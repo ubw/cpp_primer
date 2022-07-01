@@ -4,7 +4,8 @@ using namespace std;
 
 //1. template关键字
 //2. <>是模板参数列表 template parameter list
-//3. 编译的时候会实例化具体的函数
+//3. 可以用typename或者class来修饰模板类型参数(type parameter)
+//4. 编译的时候会实例化具体的函数
 template <typename T1>
 int compare(const T1 &tmp1, const T1 &tmp2)
 {
